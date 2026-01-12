@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 900px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#gameCanvas {
+    border: 3px solid #333;
+    border-radius: 10px;
+    background: #2d5016;
+    cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.score {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+.restart-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.restart-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.restart-btn:active {
+    transform: translateY(0);
+}
+
+.instructions {
+    text-align: center;
+    color: #666;
+    line-height: 1.6;
+}
+
+.instructions p {
+    margin: 5px 0;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 768px) {
+    .game-container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        margin-bottom: 15px;
+    }
+
+    .controls {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .score {
+        font-size: 1.3em;
+    }
+
+    .restart-btn {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .instructions {
+        font-size: 0.9em;
+    }
+}
+
+/* Touch feedback */
+@media (hover: none) {
+    #gameCanvas {
+        cursor: default;
+    }
+}
