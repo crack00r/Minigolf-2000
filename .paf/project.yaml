@@ -1,0 +1,12 @@
+# PAF Project Configuration
+project:
+  name: Minigolf-2000
+  type: custom
+  created: 2026-01-12
+  repository: https://github.com/crack00r/Minigolf-2000
+
+settings:
+  model: claude-opus-4-5-20251101
+  language: en
+  auto_labels: true
+  parallel_review: true
